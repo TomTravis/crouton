@@ -1,0 +1,19 @@
+#!/bin/sh -e
+# Copyright (c) 2016 The crouton Authors. All rights reserved.
+# Use of this source code is governed by a BSD-style license that can be
+# found in the LICENSE file.
+REQUIRES=core 
+DESCRIPTION= 'tools'
+
+. "${TARGETSDIR:="$PWD"}/common"
+
+### Append to prepare.sh:
+
+install net-tools util-linux  partitionmanager golang \
+-- bison cmake nano gedit gedit-plugins kwrite vlc \
+-- vlc-plugin-access-extra gnome-disk-utility gnome-sound-recorder \
+-- firefox-esr-l10n-all net-tools util-linux
+
+
+
+

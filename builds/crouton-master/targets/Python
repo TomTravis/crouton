@@ -1,0 +1,13 @@
+#!/bin/sh -e
+# Copyright (c) 2016 The crouton Authors. All rights reserved.
+# Use of this source code is governed by a BSD-style license that can be
+# found in the LICENSE file.
+REQUIRES='core'
+DESCRIPTION='Basic CLI tools such as ssh.'
+HOSTBIN='startcli'
+CHROOTBIN='croutonpowerd'
+. "${TARGETSDIR:="$PWD"}/common"
+
+### Append to prepare.sh:
+install python3-pip python3-pyqt5 libsecp256k1-0 python3-cryptography
+
